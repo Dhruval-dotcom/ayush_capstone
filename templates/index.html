@@ -1,0 +1,252 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Customer Churn Prediction</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <div class="login-root">
+      <div
+        class="box-root flex-flex flex-direction--column"
+        style="min-height: 100vh; flex-grow: 1"
+      >
+        <div class="loginbackground box-background--white padding-top--64">
+          <div class="loginbackground-gridContainer">
+            <div
+              class="box-root flex-flex"
+              style="grid-area: top / start / 8 / end"
+            >
+              <div
+                class="box-root"
+                style="
+                  background-image: linear-gradient(
+                    white 0%,
+                    rgb(247, 250, 252) 33%
+                  );
+                  flex-grow: 1;
+                "
+              ></div>
+            </div>
+            <div class="box-root flex-flex" style="grid-area: 4 / 2 / auto / 5">
+              <div
+                class="box-root box-divider--light-all-2 animationLeftRight tans3s"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+            <div
+              class="box-root flex-flex"
+              style="grid-area: 6 / start / auto / 2"
+            >
+              <div
+                class="box-root box-background--blue800"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+            <div
+              class="box-root flex-flex"
+              style="grid-area: 7 / start / auto / 4"
+            >
+              <div
+                class="box-root box-background--blue animationLeftRight"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+            <div class="box-root flex-flex" style="grid-area: 8 / 4 / auto / 6">
+              <div
+                class="box-root box-background--gray100 animationLeftRight tans3s"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+            <div
+              class="box-root flex-flex"
+              style="grid-area: 2 / 15 / auto / end"
+            >
+              <div
+                class="box-root box-background--cyan200 animationRightLeft tans4s"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+            <div
+              class="box-root flex-flex"
+              style="grid-area: 3 / 14 / auto / end"
+            >
+              <div
+                class="box-root box-background--blue animationRightLeft"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+            <div
+              class="box-root flex-flex"
+              style="grid-area: 4 / 17 / auto / 20"
+            >
+              <div
+                class="box-root box-background--gray100 animationRightLeft tans4s"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+            <div
+              class="box-root flex-flex"
+              style="grid-area: 5 / 14 / auto / 17"
+            >
+              <div
+                class="box-root box-divider--light-all-2 animationRightLeft tans3s"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="box-root padding-top--24 flex-flex flex-direction--column"
+          style="flex-grow: 1; z-index: 9"
+        >
+          <div
+            class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center"
+          >
+            <h1>Customer Churn Prediction</h1>
+          </div>
+          <div class="formbg-outer">
+            <div class="formbg">
+              <div class="formbg-inner padding-horizontal--48">
+                <span class="sub-heading padding-bottom--15"
+                  >🚀 Spot At-Risk Customers with just a click!
+                </span>
+                <form method="POST" action="" id="stripe-login">
+                  <div class="grid2">
+                    <div class="field padding-bottom--24">
+                      <label>Credit Score</label>
+                      <input name="CreditScore" type="text" />
+                    </div>
+                    <div class="field padding-bottom--24">
+                      <label>Geography</label>
+                      <input name="Geography" type="text" />
+                    </div>
+                    <div class="field padding-bottom--24">
+                      <label>Gender</label>
+                      <input name="Gender" type="text" />
+                    </div>
+                  </div>
+                  <div class="grid2">
+                    <div class="field padding-bottom--24">
+                      <label>Age</label>
+                      <input name="Age" type="text" />
+                    </div>
+                    <div class="field padding-bottom--24">
+                      <label>Tenure</label>
+                      <input name="Tenure" type="text" />
+                    </div>
+                    <div class="field padding-bottom--24">
+                      <label>Balance</label>
+                      <input name="Balance" type="text" />
+                    </div>
+                  </div>
+                  <div class="grid2">
+                    <div class="field padding-bottom--24">
+                      <label>Num Of Products</label>
+                      <input name="NumOfProducts" type="text" />
+                    </div>
+                    <div class="field padding-bottom--24">
+                      <label>Estimated Salary</label>
+                      <input name="EstimatedSalary" type="text" />
+                    </div>
+                  </div>
+                  <div class="grid2">
+                    <div
+                      class="field field-checkbox padding-bottom--24 flex-flex align-center"
+                    >
+                      <label for="checkboxCr">
+                        <input name="HasCrCard" type="checkbox" id="checkboxCr" /> Has Credit
+                        Card
+                      </label>
+                    </div>
+                    <div
+                      class="field field-checkbox padding-bottom--24 flex-flex align-center"
+                    >
+                      <label for="checkboxActive">
+                        <input name="IsActiveMember" type="checkbox" id="checkboxActive" /> Is Active
+                        Member
+                      </label>
+                    </div>
+                  </div>
+                  <div class="field submit-btn">
+                    <input
+                      type="submit"
+                      name="submit"
+                      value="🎯 Check Customer Risk"
+                    />
+                  </div>
+                  <div class="result-content">
+                    {% if result is not none %}
+                    <div class="result">
+                      {{ result }}.
+                    </div>
+                    {% endif %}
+
+                    {% if suggestions is not none %}
+                      <!-- Trigger/Open The Modal -->
+                      <button class="field result-btn" type="button" id="myBtn">
+                        Open Suggestions
+                      </button>
+                    {% endif %}
+                  </div>
+
+                  <!-- The Modal -->
+                  <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-main-content">
+                      <div class="modal-header">
+                        <h2>Suggestions to Retain Customer</h2>
+                        <span class="close">&times;</span>
+                      </div>
+                      {% if suggestions is not none %}
+                      <div class="modal-content">{{ suggestions | safe }}</div>
+                      {% endif %}
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- <div class="footer-link padding-top--24">
+              <span>Made with ❤️ Ayush Patel</span>
+              <div
+                class="listing gap--5 padding-top--24 padding-bottom--24 flex-flex center-center"
+              >
+                <span>Mann</span>
+                <span>Nakul</span>
+                <span>Devansh</span>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function () {
+      modal.style.display = "flex";
+    };
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    };
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+</html>
