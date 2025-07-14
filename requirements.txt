@@ -1,0 +1,6 @@
+Flask
+requests
+markdown
+pandas
+scikit-learn
+ipython
